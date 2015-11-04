@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="iQuiz3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ri-6x-DJn">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem title="Settings" id="4Ur-YZ-1Zx">
+                                        <connections>
+                                            <action selector="SettingsButton:" destination="vXZ-lx-hvc" id="fNf-ur-CPc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XnO-Fi-kfk">
+                                <rect key="frame" x="0.0" y="83" width="621" height="517"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="m9n-zQ-0Xr" kind="embed" id="H1A-R4-GXc"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="XnO-Fi-kfk" secondAttribute="trailing" constant="-37" id="DDJ-e4-yzL"/>
+                            <constraint firstItem="XnO-Fi-kfk" firstAttribute="top" secondItem="0Ri-6x-DJn" secondAttribute="bottom" constant="11" id="KjR-UW-eL0"/>
+                            <constraint firstItem="0Ri-6x-DJn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="a7c-9D-fqo"/>
+                            <constraint firstItem="0Ri-6x-DJn" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="c4K-3l-qtQ"/>
+                            <constraint firstItem="XnO-Fi-kfk" firstAttribute="leading" secondItem="0Ri-6x-DJn" secondAttribute="leading" id="n9E-cd-6XQ"/>
+                            <constraint firstAttribute="trailing" secondItem="0Ri-6x-DJn" secondAttribute="trailing" id="wwi-K0-x6z"/>
+                            <constraint firstItem="XnO-Fi-kfk" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="xNI-kg-jIT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="375"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="VM1-t2-jY5">
+            <objects>
+                <tableViewController id="m9n-zQ-0Xr" customClass="TableViewController" customModule="iQuiz3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1dV-pw-nGr">
+                        <rect key="frame" x="0.0" y="0.0" width="621" height="517"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myIdentifier" textLabel="9BR-zc-KXe" detailTextLabel="eDg-pi-Hg7" style="IBUITableViewCellStyleSubtitle" id="VnF-0v-m10">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VnF-0v-m10" id="tTv-7Q-fy6">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="This is a Quiz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9BR-zc-KXe">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="This is my swamp, there are many like it but this one is mine" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eDg-pi-Hg7">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="m9n-zQ-0Xr" id="Vh9-mo-T8C"/>
+                            <outlet property="delegate" destination="m9n-zQ-0Xr" id="YiY-sb-ZIA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZr-mm-JQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015" y="427"/>
+        </scene>
+    </scenes>
+</document>
